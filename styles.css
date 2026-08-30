@@ -55,7 +55,7 @@ img { display:block; max-width:100%; }
 .about h2,.services h2,.approach h2,.insights h2 { font-size:clamp(40px,4.4vw,72px); letter-spacing:.03em; line-height:1.24; font-weight:500; margin:0; }
 .about-main { max-width:1120px; }
 .about-copy { display:grid; grid-template-columns:1fr 1fr; gap:5vw; margin-top:55px; border-top:1px solid var(--line); padding-top:30px; }
-.about-copy p { margin:0; font-size:15px; line-height:2; color:#4f545c; }
+.about-copy p { margin:0; font-size:15px; line-height:2; color:#4f545c; text-align:justify; text-justify:inter-ideograph; }
 .principles { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); margin-top:68px; border:1px solid var(--line); }
 .principles div { padding:30px; background:#fff; min-height:130px; display:flex; flex-direction:column; justify-content:space-between; }
 .principles strong { font-size:28px; font-weight:500; }
