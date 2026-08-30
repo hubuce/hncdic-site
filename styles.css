@@ -53,6 +53,7 @@ img { display:block; max-width:100%; }
 .kicker { font-size:12px; font-weight:700; letter-spacing:.18em; color:#686d75; margin:0 0 23px; }
 .kicker.blue { color:#5c89ff; }
 .about h2,.services h2,.approach h2,.insights h2 { font-size:clamp(40px,4.4vw,72px); letter-spacing:.03em; line-height:1.24; font-weight:500; margin:0; }
+.services h2 { font-size:clamp(38px,4.1vw,68px); white-space:nowrap; }
 .about-main { max-width:1120px; }
 .about-copy { display:grid; grid-template-columns:1fr 1fr; gap:5vw; margin-top:55px; border-top:1px solid var(--line); padding-top:30px; }
 .about-copy p { margin:0; font-size:15px; line-height:2; color:#4f545c; text-align:justify; text-justify:inter-ideograph; }
@@ -165,6 +166,7 @@ footer { background:#05070a; color:#fff; padding:70px 7vw 35px; }
   .section { padding:85px 22px; display:block; }
   .section-label { display:none; }
   .about h2,.services h2,.approach h2,.insights h2 { font-size:42px; line-height:1.3; letter-spacing:.025em; }
+  .services h2 { font-size:clamp(31px,10vw,42px); white-space:nowrap; }
   .about-copy { grid-template-columns:1fr; gap:25px; margin-top:40px; }
   .principles { grid-template-columns:1fr; margin-top:45px; }
   .principles div { min-height:105px; }
