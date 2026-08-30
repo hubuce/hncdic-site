@@ -7,7 +7,7 @@
   <meta name="description" content="海南长定投资有限公司立足海南自由贸易港，提供企业融资、并购重组、资本战略、跨境投融资、产业招商与资本市场研究服务。">
   <meta name="keywords" content="海南长定投资,投资银行,企业融资,并购重组,跨境投融资,海南自由贸易港">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260830-5">
+  <link rel="stylesheet" href="styles.css?v=20260830-6">
 </head>
 <body>
 <main>
@@ -27,8 +27,8 @@
   </header>
 
   <section class="hero" id="top">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg" aria-hidden="true" disablepictureinpicture>
-      <source src="hero-background.mp4" type="video/mp4">
+    <video id="hero-video" class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="hero-poster.jpg?v=2" aria-hidden="true" disablepictureinpicture>
+      <source src="hero-background.mp4?v=2" type="video/mp4">
     </video>
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-content">
@@ -112,5 +112,31 @@
     <div class="copyright"><span>© 2026 海南长定投资有限公司 · 保留所有权利</span><span>海南自由贸易港 HAINAN FREE TRADE PORT</span></div>
   </footer>
 </main>
+<script>
+  (() => {
+    const video = document.getElementById('hero-video');
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
+    const startVideo = () => {
+      const playback = video.play();
+      if (playback && typeof playback.catch === 'function') playback.catch(() => {});
+    };
+
+    if (video.readyState >= 2) startVideo();
+    video.addEventListener('loadeddata', startVideo, { once: true });
+    video.addEventListener('canplay', startVideo, { once: true });
+    window.addEventListener('pageshow', startVideo);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) startVideo();
+    });
+    ['pointerdown', 'touchstart', 'keydown'].forEach((eventName) => {
+      window.addEventListener(eventName, startVideo, { once: true, passive: true });
+    });
+  })();
+</script>
 </body>
 </html>
