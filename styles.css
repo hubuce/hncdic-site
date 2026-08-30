@@ -200,4 +200,4 @@ footer { background:#05070a; color:#fff; padding:70px 7vw 35px; }
   .copyright { display:grid; gap:12px; }
 }
 
-@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } .hero-video { display:none; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
